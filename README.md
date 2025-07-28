@@ -1,4 +1,4 @@
-**Auto Shutdown Microservice**
+**OpenAV Auto Shutdown Microservice**
 
 This microservice provides endpoints that help shut down devices when they're not in use, but prevents shutdowns during specified hours or when recent activity is detected.
 
