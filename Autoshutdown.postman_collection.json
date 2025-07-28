@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "83f2559c-38a4-4e1c-bfdc-041fe45b3b2d",
+		"name": "Auto Shutdown",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26997154"
+	},
+	"item": [
+		{
+			"name": "GET Time Avoidance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{roomName}}/time_avoidance?from=0730&to=2000",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{roomName}}",
+						"time_avoidance"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "0730"
+						},
+						{
+							"key": "to",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Occupancy Detected",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{roomName}}/occupancy_detected?last_x_minutes=180",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{roomName}}",
+						"occupancy_detected"
+					],
+					"query": [
+						{
+							"key": "last_x_minutes",
+							"value": "180"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SET Occupancy Detected",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"true\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{microserviceURL}}/{{roomName}}/occupancy_detected",
+					"protocol": "http",
+					"host": [
+						"{{microserviceURL}}"
+					],
+					"path": [
+						"{{roomName}}",
+						"occupancy_detected"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
